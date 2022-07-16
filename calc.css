@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
 
-* {
+*,
+*::after,
+*::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -20,6 +22,9 @@
         /* THEME 1 TEXT COLOR */
     --text-gray: hsl(221, 14%, 31%);
     --text-white: hsla(0, 0%, 100%, 0.979);
+
+    /* TYPOGRAPHY */
+    --border-radius: .5rem;
 } 
 body {
     font-size: 32px;
@@ -28,6 +33,7 @@ body {
     background-color: var(--main-bg-color);
     /* min-width: 375px; */
     margin: 1rem auto;
+
 
     
 }
@@ -43,7 +49,7 @@ body {
 #display {
     background-color: var(--display-bg-color);
     border: none;
-    border-radius: .5rem;
+    border-radius: var(--border-radius);
     margin-bottom: 1.25rem;
     width: 100%;
     padding: 2rem 1rem ;
@@ -55,9 +61,39 @@ body {
 
 
 .buttons {
-    
+    table-layout: fixed; /*This line gives the buttons in the table equal with*/
+    border-collapse: separate; /* Creates spacing between the borders of table cells*/
+    border-spacing: 1rem;
     background-color: var(--toggle-bg-color);
+    border-radius: var(--border-radius);
+    padding: 1.8rem 1rem 1rem;
+    width: 100%;
+    height: 70vh; 
 }
+
+input[type=button] {
+    font-family: inherit;
+    font-size: 1.5rem;
+    width: 100%;
+    height: 4.5rem;
+    /* padding: 1.3rem; */
+    border-radius: .4rem;
+    border: none;
+    text-align: center;
+    
+    box-shadow: 0 6px 1px -1px gray;
+
+}
+input[value=del],
+input[value=reset] {
+    color: var(--text-white);
+    background-color: var(--btn-blue-color);
+    text-transform: uppercase;
+
+    /* box-shadow: 0 6px 1px -1px var(--btn-blue-color-shadow); */
+}
+
+
 
 
 
