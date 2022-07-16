@@ -17,10 +17,12 @@
     --btn-blue-color-shadow: hsl(224, 28%, 35%);
     --btn-red-color: hsl(6, 63%, 50%);
     --btn-red-color-shadow: hsl(6, 70%, 34%);
-    --btn-grey-color: hsl(30, 25%, 89%);
-    --btn-blue-color-shadow: hsl(30, 25%, 89%);
+    --btn-grayish-orange-color: hsl(30, 25%, 89%);
+    --btn-grayish-orange-color-shadow: hsla(30, 25%, 89%, 0.63);
+
+    --btn-box-shadow: 0 4px 1px -.8px;
         /* THEME 1 TEXT COLOR */
-    --text-gray: hsl(221, 14%, 31%);
+    --text-grayish-blue: hsl(221, 14%, 31%);
     --text-white: hsla(0, 0%, 100%, 0.979);
 
     /* TYPOGRAPHY */
@@ -32,19 +34,15 @@ body {
     font-weight: 700;
     background-color: var(--main-bg-color);
     /* min-width: 375px; */
-    margin: 1rem auto;
-
-
-    
+    margin: 1rem auto;    
 }
 .center {
     margin: 2rem auto;
-    /* outline: 2px solid red; */
     text-align: center;
     max-width: 375px;
+    height: 70vh;
     /* max-width: 100%; */
 }
-
 
 #display {
     background-color: var(--display-bg-color);
@@ -52,13 +50,11 @@ body {
     border-radius: var(--border-radius);
     margin-bottom: 1.25rem;
     width: 100%;
-    padding: 2rem 1rem ;
+    padding: 1.3rem;
     text-align: right;
     font-size: 2.5rem;
     color: var(--text-white);
-
 }
-
 
 .buttons {
     table-layout: fixed; /*This line gives the buttons in the table equal with*/
@@ -69,28 +65,48 @@ body {
     padding: 1.8rem 1rem 1rem;
     width: 100%;
     height: 70vh; 
+    cursor: pointer;
 }
-
 input[type=button] {
     font-family: inherit;
     font-size: 1.5rem;
+    font-weight: 700;
     width: 100%;
-    height: 4.5rem;
-    /* padding: 1.3rem; */
+    height: 4.3rem;
     border-radius: .4rem;
     border: none;
-    text-align: center;
-    
-    box-shadow: 0 6px 1px -1px gray;
+    border-bottom-style: outset;
+    cursor: pointer;
+}
+input[type=button]:hover {
+   transition: all .3s;
 
 }
+
+.btn_white {    
+    color: var(--text-grayish-blue);
+    background-color: var(--btn-grayish-orange-color);
+    border-bottom-color: var(--btn-grayish-orange-color);
+    text-align: center;
+        
+    box-shadow: var(--btn-box-shadow) var(--btn-grayish-orange-color-shadow);
+}
+
 input[value=del],
 input[value=reset] {
     color: var(--text-white);
     background-color: var(--btn-blue-color);
+    border-bottom-color: var(--btn-blue-color);;
     text-transform: uppercase;
 
-    /* box-shadow: 0 6px 1px -1px var(--btn-blue-color-shadow); */
+    box-shadow: var(--btn-box-shadow) var(--btn-blue-color-shadow);
+}
+#equal {
+    color: var(--text-white);
+    background-color: var(--btn-red-color);
+    border-bottom-color: var(--btn-red-color-shadow);
+
+    box-shadow: var(--btn-box-shadow) var(--btn-red-color-shadow);
 }
 
 
